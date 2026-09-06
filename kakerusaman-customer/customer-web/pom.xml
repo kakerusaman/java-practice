@@ -5,6 +5,7 @@
     <artifactId>kakerusaman-customer</artifactId>
     <groupId>com.github.kakerusaman</groupId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativepath>../pom.xml</relativepath>
   </parent>
 
   <groupId>com.github.kakerusaman</groupId>
@@ -18,8 +19,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -29,6 +30,12 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    <!--Spring-webmvc これを入れることによってspring-webも一緒についてくる。依存しているため-->
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>7.0.8</version>
+	</dependency>
   </dependencies>
 
   <build>
