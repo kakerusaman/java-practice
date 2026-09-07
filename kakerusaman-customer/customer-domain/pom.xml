@@ -1,13 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>kakerusaman-customer</artifactId>
+    <groupId>com.github.kakerusaman</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
   <groupId>com.github.kakerusaman</groupId>
-  <artifactId>kakerusaman-customer</artifactId>
+  <artifactId>customer-domain</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <!--親パッケージのためpomに設定-->
-  <packaging>pom</packaging>
-  <name>kakerusaman-customer Maven Webapp</name>
+  <packaging>war</packaging>
+
+  <name>customer-domain Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -16,10 +30,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
-    <finalName>kakerusaman-customer</finalName>
-    <pluginManagement>
-      <!-- プラグインの定義のみpluginManagementを書いたからといって実行されるわけではない -->
+    <finalName>customer-domain</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -53,15 +67,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
-  </properties>
-  <!--サブモジュールを管理-->
-  <modules>
-    <module>customer-web</module>
-    <module>customer-env</module>
-    <module>customer-domain</module>
-  </modules>
 </project>
