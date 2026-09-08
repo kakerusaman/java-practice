@@ -15,6 +15,17 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    <!--プロジェクトのバージョンを追加-->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>customer-env</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>customer-domain</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>kakerusaman-customer</finalName>
