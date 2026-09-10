@@ -3,6 +3,7 @@
 	<name>customer-web</name>
 	<comment></comment>
 	<projects>
+		<project>customer-env</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
