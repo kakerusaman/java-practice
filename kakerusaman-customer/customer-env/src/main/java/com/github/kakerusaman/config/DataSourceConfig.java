@@ -7,21 +7,41 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @PropertySource("src/main/resources/META-INF/spring/config.properties")
 public class DataSourceConfig {
-	
+	/**
+	 * DBURL
+	 */
 	@Value("${DB_URL}")
 	private String dbUrl;
 	
+	/**
+	 * DBユーザー名
+	 */
 	@Value("${DB_USERNAME}")
 	private String dbUserName;
 	
+	/**
+	 * DBパスワード
+	 */
 	@Value("${DB_PASSWORD}")
 	private String dbPassword;
-	
+
+	/**
+	 * プールサイズ
+	 */
+	@Value("${MAX_POOLSIZE}")
+	private int maxPoolSize;
+
+	/**
+	 * コネクションタイムアウト
+	 */
+	@Value("${CONNECTION_TIMEOUT}")
+	private int connectionTimeout;
 
 	@Bean
 	public DataSource dateSource() {
@@ -30,6 +50,9 @@ public class DataSourceConfig {
 		ds.setUsername(dbUserName);
 		ds.setPassword(dbPassword);
 		ds.setDriverClassName("org.postgresql.Driver");
+		// HikariCP設定
+		ds.setMaximumPoolSize(maxPoolSize);
+		ds.setConnectionTimeout(connectionTimeout);
 		
 		
 		// 起動時に接続確認
