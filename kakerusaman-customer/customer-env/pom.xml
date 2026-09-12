@@ -37,6 +37,20 @@
       <groupId>org.postgresql</groupId>                                                                                               
       <artifactId>postgresql</artifactId>                                                                                             
       </dependency>
+    <!--jspの設定で入れた-->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+    </dependency>
+  <dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+</dependency>
   </dependencies>
   <build>
     <finalName>customer-env</finalName>
