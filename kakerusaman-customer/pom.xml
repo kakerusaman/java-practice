@@ -48,6 +48,18 @@
           <artifactId>jakarta.servlet-api</artifactId>
           <version>6.1.0</version>
         </dependency>
+        <!--AOP系の設定をここに記述-->
+        <dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-aop</artifactId>
+    		<version>7.0.8</version>
+		</dependency>
+		<!--AOP系の設定。springAOP単体では動かない-->
+		<dependency>
+    		<groupId>org.aspectj</groupId>
+    		<artifactId>aspectjweaver</artifactId>
+    		<version>1.9.22</version>
+		</dependency>
       </dependencies>
     </dependencyManagement>
   <build>
