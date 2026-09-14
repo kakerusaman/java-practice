@@ -3,12 +3,14 @@ package com.github.kakerusaman.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration 
 @EnableWebMvc 
+@EnableAspectJAutoProxy //AOP用 <aop:aspectj-autoproxy/>と同等の処理
 @ComponentScan(basePackages = "com.github.kakerusaman.controller")
 public class WebConfig implements WebMvcConfigurer {
 
